@@ -1,12 +1,17 @@
 import './App.css'
 import Navbar from './component/Navbar'
-function App() {
- 
+import {Route,Routes} from 'react-router-dom'
+import Home from './pages/Home/Home'
+import Video from './pages/Video/Video'
 
+function App() {
   return (
     <>
       <Navbar />
-      <div className='bg-black'></div>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/video/:categoryId/:videoId' element={<Video />} />
+      </Routes>
     </>
   )
 }

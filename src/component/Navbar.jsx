@@ -9,14 +9,14 @@ import profile from './../assets/jack.png'
 const Navbar = () => {
   return (
       <nav>
-       <div className='flex justify-between mx-2 my-4'>
+       <div className='flex justify-between mx-2 my-2'>
         <div className='flex gap-4'>
         <div className='size-6'><img src={menu} alt="" /></div>
-        <div className='size-44'><img src={logo} alt="" /></div>
+        <div><img src={logo} className='size-auto' alt="" /></div>
         </div>
         <div className='flex'>
-        <div><input type="text" size={30} placeholder='Search' className='bg-slate-200 text-center rounded-2xl rounded-r-none h-8 w-96 border border-slate-300' /></div>
-        <div ><img src={search} className='rounded-2xl bg-slate-200 size-8 rounded-l-none border border-slate-300 w-auto' alt="" /></div>
+        <div><input type="text"  placeholder='Search' className='bg-slate-100 text-center rounded-2xl rounded-r-none h-8 w-auto ' /></div>
+        <div className='size-8 bg-slate-100 rounded-2xl rounded-l-none' ><img src={search} className='rounded-2xl size-6 mt-1.5 rounded-l-none   w-auto' alt="" /></div>
         </div>
         <div className='flex gap-4'>
             <div className='size-10'><img src={upload} alt="" /></div>
