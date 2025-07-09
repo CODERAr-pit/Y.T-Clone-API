@@ -6,13 +6,18 @@ import upload from './../assets/upload.png'
 import more from './../assets/more.png'
 import notification from './../assets/notification.png'
 import profile from './../assets/jack.png'
-const Navbar = () => {
+import Sidebar from './sidebar'
+
+const Navbar = ({currStatus,setcurrStatus}) => {
+  const openBar=()=>{
+      setcurrStatus(!currStatus);
+}
   return (
       <nav>
        <div className='flex justify-between mx-2 my-2'>
         <div className='flex gap-4'>
-        <div className='size-6'><img src={menu} alt="" /></div>
-        <div><img src={logo} className='size-auto' alt="" /></div>
+        <div className='size-6'><img src={menu} onClick={openBar} className='mt-4' alt="" /></div>
+        <div><img src={logo} className='size-auto ' alt="" /></div>
         </div>
         <div className='flex'>
         <div><input type="text"  placeholder='Search' className='bg-slate-100 text-center rounded-2xl rounded-r-none h-8 w-auto ' /></div>

@@ -1,10 +1,21 @@
 import React from 'react'
 import Sidebar from '../../component/sidebar'
-const Home = () => {
+import AltSidebar from '../../component/Altsidebar'
+import Feed from '../../component/feed'
+const Home = ({currStatus}) => {
   return (
-    <>
-     <Sidebar /> 
-    </>
+   <>
+   <div className='flex'>
+  <div className="hidden md:block">
+    <Sidebar currStatus={currStatus}/>
+  </div>
+  <div className="block md:hidden">
+    <AltSidebar />
+  </div>
+  <Feed />
+  </div>
+</>
+
   )
 }
 

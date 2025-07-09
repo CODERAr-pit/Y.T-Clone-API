@@ -13,8 +13,12 @@ import simon from '../assets/simon.png'
 import tom from '../assets/tom.png'
 import megan from '../assets/megan.png'
 import cameron from '../assets/cameron.png'
+import Altsidebar from './Altsidebar'
+const Sidebar = ({currStatus}) => {
+  if(!currStatus)return (<>
+      <Altsidebar />
+  </>);
 
-const Sidebar = () => {
   return (
     <>
     <div className='flex flex-col gap-4 mt-8'>
@@ -80,7 +84,7 @@ const Sidebar = () => {
       </div>
     </div>
     </>
-  )
-}
+  )}
+
 
 export default Sidebar
