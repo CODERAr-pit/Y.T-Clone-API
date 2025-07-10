@@ -7,10 +7,18 @@ import thumbnail5 from '../assets/thumbnail5.png'
 import thumbnail6 from '../assets/thumbnail6.png'
 import thumbnail7 from '../assets/thumbnail7.png'
 import thumbnail8 from '../assets/thumbnail8.png'
+import Video from '../pages/Video/Video.jsx'
+import { useNavigate } from 'react-router-dom';
+
 const feed = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/video');
+  };
+    
   return (
     <div className='flex flex-wrap gap-4 ml-10 mt-8'>
-      <div className='size-80 '>
+      <div className='size-80' onClick={handleClick}>
         <img src={thumbnail1} className='rounded-xl' alt="" />
         <h2 className='p-1 font-semibold'>Best Channel to learn coding, Dsa,Web-Devloping,corn</h2>
         <h3 className='ml-1 text-gray-800'>Xenum-Edu</h3>
@@ -106,8 +114,11 @@ const feed = () => {
         <h3 className='ml-1 text-gray-800'>Xenum-Edu</h3>
         <p className='ml-1'>150M views &bull;2 hours ago</p>
       </div>
+      <div>
+        
+      </div>
     </div>
   );
-}
 
+}
 export default feed

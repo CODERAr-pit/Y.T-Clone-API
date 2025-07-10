@@ -11,7 +11,7 @@ function App() {
       <Navbar currStatus={currStatus} setcurrStatus={setcurrStatus} />
       { <Routes>
         <Route path='/' element={<Home currStatus={currStatus} />} />
-        <Route path='/video/:categoryId/:videoId' element={<Video />} />
+        <Route path='/video' element={<Video />} />
       </Routes> }
     </>
   )
